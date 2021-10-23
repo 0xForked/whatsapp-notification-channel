@@ -110,7 +110,34 @@ public function routeNotificationForWhatsApp()
 
 ### Available Message methods
 
-A list of all available options
+## 1.0.0 - 2021-10-24
+
+- initial release
+- WhatsAppAuth
+
+  available methods:
+    - `->action($action)` : (string) selection between [login]|[logout]|[info]
+    - `->do()`: Running this action
+
+  usages:
+    ```php
+        \NotificationChannels\WhatsApp\WhatsAppAuth::create()
+        ->action('info') // info/login/logout
+        ->do();
+    ```
+
+- WhatsAppMessage
+
+  available methods:
+    - `->to($msisdn)`: (string) Recipient's Destination number
+    - `->content('')`: (string) Notification message.
+    - `->options([])`: (array) Allows you to add additional or override sendMessage payload.
+
+for more please read Changelog
+
+#### TODO NEXT
+1. WhatsAppFile (audio, document, image, video)
+2. WhatsAppLocation
 
 ## Changelog
 
