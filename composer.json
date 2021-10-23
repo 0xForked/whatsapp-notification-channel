@@ -1,20 +1,30 @@
 {
-    "name": "laravel-notification-channels/:package_name",
-    "description": ":package_description",
-    "homepage": "https://github.com/laravel-notification-channels/:package_name",
+    "name": "aasumitro/whatsapp-notification-channel",
+    "description": "WhatsApp Notifications Channel for Laravel using wagorf as a Worker",
+    "keywords": [
+        "whatsapp notification",
+        "laravel",
+        "whatsapp",
+        "notification",
+        "whatsapp notifications channel"
+    ],
+    "homepage": "https://github.com/aasumitro/whatsapp-notification-channel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": ":A. A. Sumitro",
+            "email": "hello@aasumitro.id",
+            "homepage": "https://aasumitro.id",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "illuminate/notifications": "~6.0 || ~7.0 || ~8.0",
-        "illuminate/support": "~6.0 || ~7.0 || ~8.0"
+        "php": ">=7.2 || ^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.2 || ^7.0",
+        "illuminate/contracts": " ^8.0",
+        "illuminate/notifications": "~8.0",
+        "illuminate/support": "~8.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
@@ -22,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\": "src"
+            "NotificationChannels\\WhatsApp\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\Test\\": "tests"
+            "NotificationChannels\\WhatsApp\\Test\\": "tests"
         }
     },
     "scripts": {
