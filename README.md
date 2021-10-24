@@ -135,10 +135,11 @@ public function routeNotificationForWhatsApp()
 
   available methods:
     - `extract_message($message, $needle): object` (object) Will extract response message or something
+
 for more please read Changelog
 
 #### TODO NEXT
-1. WhatsAppFile (audio, document, image, video)
+1. WhatsAppFile (audio, document, image, video) ***prior***
 2. WhatsAppLocation
 
 ## Changelog
