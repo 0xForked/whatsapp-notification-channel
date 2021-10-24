@@ -112,7 +112,6 @@ public function routeNotificationForWhatsApp()
 
 ## 1.0.0 - 2021-10-24
 
-- initial release
 - WhatsAppAuth
 
   available methods:
