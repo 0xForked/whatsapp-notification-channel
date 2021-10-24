@@ -24,3 +24,8 @@ All notable changes to `whatsapp-notification-channel` will be documented in thi
     - `->to($msisdn)`: (string) Recipient's Destination number
     - `->content('')`: (string) Notification message.
     - `->options([])`: (array) Allows you to add additional or override sendMessage payload.
+
+- Helpers
+    
+    available methods:
+    - `extract_message($message, $needle): object` (object) Will extract response message or something
