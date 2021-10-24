@@ -126,19 +126,13 @@ class WhatsAppAuth implements JsonSerializable
         unset($params['action']);
 
         if ($action === 'login') {
-            // TODO NEXT
-            // ACTION:LOGIN
             return $this->sendRequest('login', $params);
         }
 
         if ($action === 'logout') {
-            // TODO NEXT
-            // ACTION:LOGOUT
             return  $this->sendRequest('logout', []);
         }
 
-        // TODO NEXT
-        // ACTION:INFO
         return $this->sendRequest('info', []);
     }
 
@@ -168,7 +162,7 @@ class WhatsAppAuth implements JsonSerializable
         } catch (ClientException $exception) {
             throw CouldNotSendNotification::workerRespondedWithAnError($exception);
         } catch (Exception $exception) {
-            throw CouldNotSendNotification::couldNotCommunicateWithWorker($exception);
+            throw CouldNotSendNotification::couldNotCommunicateWithWorker($exception->getMessage());
         } catch (GuzzleException $exception) {
             throw CouldNotSendNotification::guzzleHasSomethingToSay($exception);
         }

@@ -23,15 +23,6 @@ class WhatsAppServiceProvider extends ServiceProvider
                     config('services.whatsapp-worker.worker_api_uri')
                 );
             });
-
-        $this->app->when(WhatsAppAuth::class)
-            ->needs(WhatsApp::class)
-            ->give(static function () {
-                return new WhatsApp(
-                    app(HttpClient::class),
-                    config('services.whatsapp-worker.worker_api_uri')
-                );
-            });
     }
 
     /**
@@ -39,6 +30,10 @@ class WhatsAppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        foreach (glob(__DIR__.'/Helpers/*.php') as $filename){
+            require_once($filename);
+        }
+
         Notification::resolved(function (ChannelManager $service) {
             $service->extend('whatsapp', function ($app) {
                 return new WhatsAppChannel(
