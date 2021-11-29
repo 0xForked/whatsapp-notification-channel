@@ -1,4 +1,4 @@
-# WhatsApp Notifications Channel for Laravel using [wagorf](https://github.com/aasumitro/wagorf) as a Worker
+# WhatsApp Notifications Channel for Laravel using [gowa](https://github.com/aasumitro/gowa) as a Worker
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/:package_name.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/:package_name)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -8,7 +8,7 @@
 [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/laravel-notification-channels/:package_name/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/:package_name/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/:package_name.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/:package_name)
 
-This package makes it easy to send notifications using [WhatsApp Bussiness API](https://www.whatsapp.com/business/api) over wagorf Worker with Laravel 8.0+
+This package makes it easy to send notifications using [WhatsApp Bussiness API](https://www.whatsapp.com/business/api) over gowa Worker with Laravel 8.0+
 
 ## Contents
 
@@ -37,7 +37,7 @@ Then, configure your WhatsApp Worker API URL:
 ```php
 // config/services.php
 'whatsapp-worker' => [
-    'worker_api_uri' => env('WAGORF_API_URL', 'YOUR BOT TOKEN HERE')
+    'worker_api_uri' => env('GOWA_API_URL', 'YOUR WORKER TOKEN HERE')
 ],
 ```
 
