@@ -37,7 +37,7 @@ Then, configure your WhatsApp Worker API URL:
 ```php
 // config/services.php
 'whatsapp-worker' => [
-    'worker_api_uri' => env('GOWA_API_URL', 'YOUR WORKER TOKEN HERE')
+    'worker_api_uri' => env('GOWA_API_URL', 'YOUR WORKER API_URL HERE')
 ],
 ```
 
