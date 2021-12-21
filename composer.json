@@ -1,6 +1,6 @@
 {
     "name": "aasumitro/whatsapp-notification-channel",
-    "description": "WhatsApp Notifications Channel for Laravel using wagorf as a Worker",
+    "description": "WhatsApp Notifications Channel for Laravel using GoWa as a Worker",
     "keywords": [
         "whatsapp notification",
         "laravel",
@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "php": ">=7.4 || ^8.0",
+        "php": "^8.0",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.2 || ^7.0",
         "illuminate/contracts": " ^8.0",

@@ -1,6 +1,4 @@
-# TODO RFC2
-
-# WhatsApp Notifications Channel for Laravel using [gowa](https://github.com/aasumitro/gowa) as a Worker
+# WhatsApp Notifications Channel for Laravel using [GoWa](https://github.com/aasumitro/gowa) as a Worker
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/:package_name.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/:package_name)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -38,8 +36,8 @@ Then, configure your WhatsApp Worker API URL:
 
 ```php
 // config/services.php
-'whatsapp-worker' => [
-    'worker_api_uri' => env('GOWA_API_URL', 'YOUR WORKER API_URL HERE')
+'whatsapp-notification-service' => [
+    'service_api_url' => env('WHATSAPP_SERVICE_URL', 'YOUR WORKER API_URL HERE')
 ],
 ```
 
@@ -57,6 +55,14 @@ Then, register whatsapp notification service provider:
 ```
 
 ## Usage
+
+#### Authentication
+use the view component
+
+```html
+<x-whatsapp-account></x-whatsapp-account>
+```
+
 You can now use the channel in your via() method inside the Notification class.
 
 ```php
