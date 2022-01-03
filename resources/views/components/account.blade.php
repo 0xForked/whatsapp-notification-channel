@@ -1,14 +1,5 @@
 <div id="whatsapp-account" class="account-container"></div>
-<style>
-    .account-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-</style>
+<style>.account-container{display: flex;flex-direction: column;align-items: center;justify-content: center;width: 100%;height: 100%;}</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
