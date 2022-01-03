@@ -8,7 +8,7 @@
 [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/laravel-notification-channels/:package_name/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/:package_name/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/:package_name.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/:package_name)
 
-This package makes it easy to send notifications using [WhatsApp Bussiness API](https://www.whatsapp.com/business/api) over gowa Worker with Laravel 8.0+
+This package makes it easy to send notifications using [WhatsApp Business API](https://www.whatsapp.com/business/api) over GoWa Worker with Laravel 8.0+
 
 ## Contents
 
@@ -116,36 +116,6 @@ public function routeNotificationForWhatsApp()
 }
 ```
 
-### Available Message methods
-
-## 1.0.0 - 2021-10-24
-
-- WhatsAppAuth
-
-  available methods:
-    - `->action($action)` : (string) selection between [login]|[logout]|[info]
-    - `->do()`: Running this action
-
-  usages:
-    ```php
-        \NotificationChannels\WhatsApp\WhatsAppAuth::create()
-        ->action('info') // info/login/logout
-        ->do();
-    ```
-
-- WhatsAppMessage
-
-  available methods:
-    - `->to($msisdn)`: (string) Recipient's Destination number
-    - `->content('')`: (string) Notification message.
-    - `->options([])`: (array) Allows you to add additional or override sendMessage payload.
-- Helpers
-
-  available methods:
-    - `extract_message($message, $needle): object` (object) Will extract response message or something
-
-for more please read Changelog
-
 #### TODO NEXT
 1. WhatsAppFile (audio, document, image, video) ***prior***
 2. WhatsAppLocation
@@ -159,6 +129,10 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ``` bash
 $ composer test
 ```
+or 
+```bash
+$ ./vendor/bin/phpunit ./packages/whatsapp-notification-channel/tests
+```
 
 ## Security
 
@@ -167,11 +141,6 @@ If you discover any security related issues, please email [hello@aasumitro.id](m
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Credits
-
-- [A. A. Sumitro](https://github.com/aasumitro)
-- [All Contributors](../../contributors)
 
 ## License
 
